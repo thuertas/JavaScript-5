@@ -1,0 +1,66 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>JavaScript If Statement Exercise</title>
+</head>
+<body>
+    <img src='' alt=''>
+    <a href='' title=''></a>
+  <script>
+    // Each time you refresh this file in your browser the variable "number"
+    // will have a different value between 1 and 3
+    var number = Math.floor( Math.random() * 3) + 1;
+
+    // For the given value of "number", the code below sets up some variables.
+    // Notice that the same variables are used,
+    // but given different values in each case
+    // And sometimes a variable has an "empty string" for its value
+    var linkName;
+    var linkLogo;
+    var linkURL;
+    var linkDescription; 
+    if( number == 1 )
+    {
+      linkName = "W3Schools";
+      linkLogo = "http://www.w3schools.com/images/w3schools.png";
+      linkURL = "http://www.w3schools.com/";
+      linkDescription = "W3Schools is a web developer information website, with tutorials and references relating to web development topics such as HTML, CSS, JavaScript and PHP.";
+    }
+    else if( number == 2 )
+    {
+      linkName = "Code Academy";
+      linkLogo = "";
+      linkURL = "https://www.codecademy.com/";
+      linkDescription = "Codecademy is an online interactive platform that offers free coding classes in 9 different programming languages.";
+    }
+    else
+    {
+      linkName = "";
+      linkLogo = "http://www.w3.org/2008/site/images/logo-w3c-mobile-lg";
+      linkURL = "http://www.w3.org/";
+      linkDescription = "The World Wide Web Consortium is the main international standards organization for the World Wide Web.";
+    }
+    
+    // Your task in this exercise is to appropriately
+    // output all of the variable values
+    // You will need to wrap your output commands with "if" statements 
+    // in case the variable you are working with is empty.
+    // For example, the first variable could be output like this
+    // Now do the other variables
+    // Be sure to test your code!
+
+
+    //put all the variables in a clicable img 
+    //--> LinkDescription is the alt of the img
+    //--> LinkURL is the href
+    //--> linkName is the title of the anchor
+    //--> linkLogo is the src
+    if (linkName != "" || linkLogo != "" || linkURL != "" || linkDescription != "") {
+        document.write("<a href='" + linkURL + "' title='" + linkName + "'>" + "<img src='" + linkLogo + "' alt='" + linkDescription + "'></a>");
+        document.write("<p>" + linkDescription + "</p>");
+    }
+  </script>
+</body>
+</html>
